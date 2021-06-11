@@ -1,5 +1,6 @@
 package com.lhint.springdemo2.service;
 
+import com.lhint.springdemo2.converters.CourseConverter;
 import com.lhint.springdemo2.model.Course;
 import com.lhint.springdemo2.repository.CourseRepository;
 import com.lhint.springdemo2.repository.CourseRepositoryImpl;

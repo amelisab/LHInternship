@@ -39,6 +39,6 @@ public class RegistrationRepositoryImpl implements RegistrationRepository {
 
     @Override
     public List<Registration> listAll() {
-        return entityManager.createQuery("fromRegistration").getResultList();
+        return entityManager.createQuery("from Registration").getResultList();
     }
 }

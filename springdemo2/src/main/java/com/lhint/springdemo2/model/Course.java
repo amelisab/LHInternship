@@ -46,12 +46,12 @@ public class Course implements Serializable {
         this.name = name;
     }
 
-    public String getDecription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDecription(String decription) {
-        this.description = decription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Registration getRegistrations() {

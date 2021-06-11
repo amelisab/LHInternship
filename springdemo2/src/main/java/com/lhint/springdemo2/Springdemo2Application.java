@@ -1,5 +1,6 @@
 package com.lhint.springdemo2;
 
+import com.lhint.springdemo2.converters.CourseConverter;
 import com.lhint.springdemo2.model.Course;
 import com.lhint.springdemo2.model.Registration;
 import com.lhint.springdemo2.model.User;
@@ -27,7 +28,7 @@ Springdemo2Application {
 		//Adding course named Java in DB
 //		Course course = new Course();
 //		course.setName("Java");
-//		course.setDecription("Introduction to Java");
+//		course.setDescription("Introduction to Java");
 //		course.setRegistrations(registrationService.find(1));
 //		courseService.saveOrUpdate(course);
 
@@ -60,14 +61,18 @@ Springdemo2Application {
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //		Creating user
 
-		User user = new User();
-		user.setFirstName("Amelisa");
-		user.setLastName("Brari");
-		user.setAge(22);
-		userService.saveOrUpdate(user);
+//		User user = new User();
+//		user.setFirstName("Amelisa");
+//		user.setLastName("Brari");
+//		user.setAge(22);
+//		userService.saveOrUpdate(user);
 
-
-
+//		CourseConverter converter = new CourseConverter();
+//
+//		Course course = new Course();
+//		course = courseService.find(1);
+//
+//		System.out.println(course.getName());
 
 	}
 
