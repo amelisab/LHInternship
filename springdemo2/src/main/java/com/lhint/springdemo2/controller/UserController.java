@@ -1,37 +1,38 @@
 package com.lhint.springdemo2.controller;
 
 import com.lhint.springdemo2.model.Registration;
+import com.lhint.springdemo2.model.User;
 import com.lhint.springdemo2.service.RegistrationServiceImpl;
+import com.lhint.springdemo2.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
-    RegistrationServiceImpl registrationService;
+    UserServiceImpl userService;
 
-    @GetMapping("/registrations/{id}")
-    public Registration getRegistrationById(@PathVariable Integer id){
-        return registrationService.find(id);
+    @GetMapping("/users/{id}")
+    public User getUserById(@PathVariable Integer id){
+        return userService.find(id);
     }
 
-    @GetMapping("/registrations")
-    public List<Registration> listAllRegistrations(){
-        return registrationService.listAll();
+    @GetMapping("/users")
+    public List<User> listAllUsers(){
+        return userService.listAll();
     }
 
-    @PostMapping("/registrations")
-    public Registration createRegistration(@RequestBody Registration registration) {
-        System.out.println(registration.getName());
-        return registrationService.saveOrUpdate(registration);
+    @PostMapping("/users")
+    public User createUser(@RequestBody User user) {
+        return userService.saveOrUpdate(user);
     }
 
-    @DeleteMapping("/registrations/{registrationId}")
-    public void deleteRegistration(@PathVariable Integer registrationId){
-        registrationService.delete(registrationId);
+    @DeleteMapping("/users/{userId}")
+    public void deleteUser(@PathVariable Integer userId){
+        userService.delete(userId);
     }
 }
